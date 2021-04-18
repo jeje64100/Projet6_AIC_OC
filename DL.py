@@ -1,7 +1,7 @@
 from tqdm import tqdm
 import requests
 
-url = ""
+url = "https://github.com/glpi-project/glpi/releases/download/9.3.3/glpi-9.3.3.tgz"
 response = requests.get(url, stream=True)
 
 with open("glpi.tar", "wb") as fichier:
