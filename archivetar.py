@@ -1,5 +1,7 @@
 import tarfile
 
-archive = tarfile.open('glpi.tar')
-archive.extractall(path = '/var/www/html')
-archive.close()
+def desarchivage(nom, chemin):
+	with tarfile.open(nom) as archive:
+		archive.extractall(path=chemin)
+	archive.close()
+
