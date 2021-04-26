@@ -1,14 +1,15 @@
 import mysql.connector
 
-bd=mysql.connector.connect(host='localhost',
-					user='root',
-					password='root',
-					unix_socket='/var/run/mysqld/mysqld.sock'
-					)
+def creationbd(hote, admin, mdp, chemin, bd, utilbd, mdputilbd):
+	mydb=mysql.connector.connect(host=hote,
+			user=admin,
+			password=mdp,
+			unix_socket=chemin
+			)
+	mycursor=mydb.cursor()
+	mycursor.execute("CREATE DATABASE "+bd)
+	mycursor.execute("GRANT ALL privileges on "+bd+".* to "+utilbd+"@"+hote+" IDENTIFIED BY \'"+mdputilbd+"\'")
+	mycursor.close()
+	mydb.close()
 
-cursor=bd.cursor()
-cursor.execute("CREATE DATABASE glpidb")
-cursor.execute("GRANT ALL privileges on glpidb.* to 'glpiuser'@'localhost' IDENTIFIED BY 'glpimdp'")
 
-cursor.close()
-bd.close()
