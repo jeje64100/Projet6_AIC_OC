@@ -1,0 +1,12 @@
+lien: https://github.com/glpi-project/glpi/releases/download/9.5.0/glpi-9.5.0.tgz
+nomarchive: glpi.tgz
+pathglpi: /var/www/html
+host: localhost
+user: root
+password: root 
+unix_socket: /var/run/mysqld/mysqld.sock
+database: GLPIbd
+databaseuser: glpiuser
+passworddatabaseuser: glpimdp
+passworduser: glpimdp
+langue: fr_FR
