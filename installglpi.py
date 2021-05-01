@@ -8,8 +8,13 @@ from infosyaml import Fyaml
 from scriptinstallglpi import install
 import sys
 
-fichier=str(sys.argv[1])
-data=Fyaml(fichier)
+try:
+	fichier=str(sys.argv[1])
+	data=Fyaml(fichier)
+
+except:
+	print("Merci de renseigner le nom du fichier .yaml en argument pour lancer le script")
+	exit()
 
 telechargement(data["lien"], data["nomarchive"])
 desarchivage(data["nomarchive"], data["pathglpi"])
