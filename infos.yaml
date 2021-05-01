@@ -1,6 +1,9 @@
 lien: https://github.com/glpi-project/glpi/releases/download/9.5.0/glpi-9.5.0.tgz
+lienfi: https://github.com/fusioninventory/fusioninventory-for-glpi/releases/download/glpi9.5%2B3.0/fusioninventory-9.5+3.0.tar.bz2
 nomarchive: glpi.tgz
+nomarchivefi: fusioninventory.tar.bz2
 pathglpi: /var/www/html
+pathfi: /var/www/html/glpi/plugins
 host: localhost
 user: root
 password: root 
@@ -8,5 +11,4 @@ unix_socket: /var/run/mysqld/mysqld.sock
 database: GLPIbd
 databaseuser: glpiuser
 passworddatabaseuser: glpimdp
-passworduser: glpimdp
 langue: fr_FR
