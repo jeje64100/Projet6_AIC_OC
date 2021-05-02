@@ -6,6 +6,7 @@ from creationbd import creationbd
 from droits import droits
 from infosyaml import Fyaml
 from scriptinstallglpi import install
+from scriptinstallfi import installfi
 import sys
 
 try:
@@ -21,6 +22,9 @@ try:
 	desarchivage(data["nomarchive"], data["pathglpi"])
 	creationbd(data["host"], data["user"], data["password"], data["unix_socket"], data["database"], data["databaseuser"], data["passworddatabaseuser"])
 	install(data["pathglpi"], data["langue"], data["host"], data["database"], data["databaseuser"], data["passworddatabaseuser"])
+	telechargement(data["lienfi"], data["nomarchivefi"])
+	desarchivage(data["nomarchivefi"], data["pathfi"])
+	installfi(data["pathglpi"])
 	droits(data["pathglpi"])
 
 except KeyError as Erreur:
