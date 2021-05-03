@@ -20,3 +20,6 @@ def creationbd(hote, admin, mdp, chemin, bd, utilbd, mdputilbd):
 	except mysql.connector.errors.InterfaceError:
 		print("Le chemin unix_socket n'est pas correct, merci de vérifier la valeur de la clé dans le fichier .yaml")
 		return exit()
+	except mysql.connector.errors.DatabaseError:
+		print("La base de donnée existe déjà, merci de l'effacer avant de relancer l'installation")
+		return exit()
