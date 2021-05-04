@@ -12,3 +12,5 @@ database: GLPIbd
 databaseuser: glpiuser
 passworddatabaseuser: glpimdp
 langue: fr_FR
+uid: 33
+gid: 33
