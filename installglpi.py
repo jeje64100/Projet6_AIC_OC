@@ -25,7 +25,7 @@ try:
 	telechargement(data["lienfi"], data["nomarchivefi"])
 	desarchivage(data["nomarchivefi"], data["pathfi"])
 	installfi(data["pathglpi"])
-	droits(data["pathglpi"])
+	droits(data["pathglpi"], int(data["uid"]), int(data["gid"]))
 
 except KeyError as Erreur:
 	print("La clé", Erreur, "dans le fichier .yaml n'existe pas")
