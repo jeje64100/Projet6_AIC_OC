@@ -10,8 +10,11 @@ def telechargement(adresse, nom):
 			for data in tqdm(response.iter_content()):
 				fichier.write(data)
 		fichier.close()
-	except:
-		print("Merci de vous assurez de la validité du lien de téléchargement de",nom)
+
+	except (requests.exceptions.MissingSchema, requests.exceptions.InvalidSchema):
+		print("L'url ne commence pas par http:// ou https:// :\n",url)
 		return exit()
 
-
+	except requests.exceptions.ConnectionError:
+		print("Impossible d'établir une connexion", "\nURL inconnue",url,"\nou vérifiez votre connexion")
+		return exit()
