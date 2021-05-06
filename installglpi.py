@@ -29,3 +29,4 @@ try:
 
 except KeyError as Erreur:
 	print("La clé", Erreur, "dans le fichier .yaml n'existe pas")
+	exit()
