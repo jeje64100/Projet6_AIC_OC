@@ -2,9 +2,13 @@ import subprocess
 from crontab import CronTab
 
 def installfi(chemin):
-	subprocess.run(["php", chemin+"/glpi/bin/console", "glpi:plugin:install", "--username", "glpi", "fusioninventory"])
-	subprocess.run(["php", chemin+"/glpi/bin/console", "glpi:plugin:activate", "fusioninventory"])
+
 	try:
+		cmd1=subprocess.run(["php", chemin+"/glpi/bin/console", "glpi:plugin:install", "--username", "glpi", "fusioninventory"], stderr=subprocess.PIPE)
+		cmd2=subprocess.run(["php", chemin+"/glpi/bin/console", "glpi:plugin:activate", "fusioninventory"], stderr=subprocess.PIPE)
+		cmd1.check_returncode()
+		cmd2.check_returncode()
+
 		cron=CronTab(user='www-data')
 		job=cron.new(command='/usr/bin/php5 '+chemin+'/glpi/front/cron.php &>/dev/null')
 		job.minute.every(1)
@@ -12,6 +16,10 @@ def installfi(chemin):
 
 	except TypeError:
 		print("Le mauvais module est installé.Merci de désinstaller crontab et d'installer python-crontab")
+		return exit()
+
+	except subprocess.CalledProcessError as e:
+		print("une erreur est survenue:\nreturncode: ",e.returncode, "\Output: ",e.stderr.decode("utf-8"))
 		return exit()
 
 	subprocess.run(["systemctl", "restart", "cron"])
