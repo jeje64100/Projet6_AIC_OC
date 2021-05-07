@@ -13,8 +13,8 @@ def telechargement(adresse, nom):
 
 	except (requests.exceptions.MissingSchema, requests.exceptions.InvalidSchema):
 		print("L'url ne commence pas par http:// ou https:// :\n",url)
-		return exit()
+		return exit(4)
 
 	except requests.exceptions.ConnectionError:
 		print("Impossible d'établir une connexion", "\nURL inconnue",url,"\nou vérifiez votre connexion")
-		return exit()
+		return exit(5)

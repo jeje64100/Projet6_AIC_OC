@@ -11,4 +11,4 @@ def install(chemin, langue, hote, base, user, mdp):
 
 	except subprocess.CalledProcessError as e:
 		print("une erreur est survenue:\nreturncode: ",e.returncode, "\Output: ",e.stderr.decode("utf-8"))
-		return exit()
+		return exit(10)

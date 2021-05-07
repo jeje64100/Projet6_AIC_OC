@@ -16,10 +16,10 @@ def installfi(chemin):
 
 	except TypeError:
 		print("Le mauvais module est installé.Merci de désinstaller crontab et d'installer python-crontab")
-		return exit()
+		return exit(11)
 
 	except subprocess.CalledProcessError as e:
 		print("une erreur est survenue:\nreturncode: ",e.returncode, "\Output: ",e.stderr.decode("utf-8"))
-		return exit()
+		return exit(12)
 
 	subprocess.run(["systemctl", "restart", "cron"])

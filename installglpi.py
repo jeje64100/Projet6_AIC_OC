@@ -15,7 +15,7 @@ try:
 
 except IndexError:
 	print("Merci de renseigner le nom du fichier .yaml en argument pour lancer le script")
-	exit()
+	exit(1)
 
 try:
 	telechargement(data["lien"], data["nomarchive"])
@@ -29,4 +29,4 @@ try:
 
 except KeyError as Erreur:
 	print("La clé", Erreur, "dans le fichier .yaml n'existe pas")
-	exit()
+	exit(2)

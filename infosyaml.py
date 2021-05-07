@@ -8,4 +8,4 @@ def Fyaml(fichier):
 
 	except FileNotFoundError:
 		print("Le fichier",fichier,"n'existe pas")
-		return exit()
+		return exit(3)

@@ -13,9 +13,9 @@ def droits(chemin, uid, gid):
 
 	except PermissionError:
 		print("Vous n'avez pas les droits nécesssaires, veuillez passer en root ou super-utilisateur")
-		return exit()
+		return exit(13)
 
 	except TypeError:
 		print("L'UID et le GID doivent être des entiers")
-		return exit()
+		return exit(14)
 

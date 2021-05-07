@@ -8,4 +8,4 @@ def desarchivage(nom, chemin):
 
 	except tarfile.ReadError:
 		print("Le format de l'archive n'est pas compatible")
-		return exit()
+		return exit(6)
