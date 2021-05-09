@@ -8,7 +8,7 @@
 # - mysql ou mysqlmariadb
 # - apache2 php libapache2-mod-php 
 # - php-impa php-ladp php-curl php-gd php-mysql php-cas php-xml php-intl php3.7-mbstring php-apcu
-" - apcupsd
+# - apcupsd
 
 # Ce programme fonctionne sous Python3 et utilise les modules (ceux sans asterisque sont inclus de base dans python3) :
 # - sys
