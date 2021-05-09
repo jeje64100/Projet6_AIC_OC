@@ -1,16 +1,32 @@
+# adresse pour télécharger GLPI
 lien: https://github.com/glpi-project/glpi/releases/download/9.5.0/glpi-9.5.0.tgz
+# adresse pour télécharger fusioninventory
 lienfi: https://github.com/fusioninventory/fusioninventory-for-glpi/releases/download/glpi9.5%2B3.0/fusioninventory-9.5+3.0.tar.bz2
+# nom de l'archive de glpi !!!!! ne pas modifier
 nomarchive: glpi.tgz
+# nom de l'archive de fusioninventory !!!!! ne pas modifier
 nomarchivefi: fusioninventory.tar.bz2
+# chemin d'installation pour glpi !!!!! ne pas modifier
 pathglpi: /var/www/html
+# chemin d'installation pour fusioninventory !!!!! ne pas modifier
 pathfi: /var/www/html/glpi/plugins
+# hôte pour se connecter à mysql
 host: localhost
+# nom du compte administrateur de mysql(renseigner le nom de votre compte administrateur)
 user: root
+# mot de passe du compte administrateur de mysql(renseigner le mot de passe de votre compte administrateur)
 password: root 
+# chemin pour l'unix_socket (vous pouvez vérifier cette donnée en vous connectant à mysql avec le compte administrateur et taper : \s)
 unix_socket: /var/run/mysqld/mysqld.sock
+# nom donnée à la base de donnée crée pour glpi 
 database: GLPIbd
+# nom donné à l'utilisateur de la base de donnée de glpi
 databaseuser: glpiuser
+# mot de passe créé lors de la création de l'utilisateur de la base de donnée de glpi !!!!! il est fortement conseillé de définier votre mot de passe
 passworddatabaseuser: glpimdp
+# langue d'installation de glpi
 langue: fr_FR
+# numéro uid par défaut de l'utilisateur www-data
 uid: 33
+# numéro gid par défaut du groupe www-data
 gid: 33
