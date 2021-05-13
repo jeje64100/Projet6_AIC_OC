@@ -18,7 +18,7 @@ def installfi(chemin):
 
 # Création du crontab pour l'utilisateur www-data.
 		cron=CronTab(user='www-data')
-		job=cron.new(command='/usr/bin/php5 '+chemin+'/glpi/front/cron.php &>/dev/null')
+		job=cron.new(command='/usr/bin/php7.3 '+chemin+'/glpi/front/cron.php &>/dev/null')
 		job.minute.every(1) # fréquence de la tâche équivalent à * * * * * .
 		cron.write()
 
