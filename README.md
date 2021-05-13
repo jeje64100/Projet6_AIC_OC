@@ -6,7 +6,7 @@
 # Le serveur destiné a recevoir cette installation doit posséder certains pré-requis, les paquets suivant doivent être installés :
 
 # - mysql ou mysqlmariadb
-# - apache2 php libapache2-mod-php 
+# - apache2 php libapache2-mod-php (actuellement la version php installée est php 7.3)
 # - php-impa php-ladp php-curl php-gd php-mysql php-cas php-xml php-intl php3.7-mbstring php-apcu
 # - apcupsd
 
