@@ -1,3 +1,6 @@
+# Fichier yaml contenant les clés et leurs valeurs nécessaires au script installglpi.py.
+# Jerome MARTIQUET v1.0
+
 # adresse pour télécharger GLPI
 lien: https://github.com/glpi-project/glpi/releases/download/9.5.0/glpi-9.5.0.tgz
 # adresse pour télécharger fusioninventory
