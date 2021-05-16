@@ -1,6 +1,6 @@
 # Projet6_AIC_OC
 # PROGRAMME D'AUTOMATISATION DE L'INSTALLATION DE GLPI ET DU PLUGIN FUSIONINVENTORY FOR GLPI EN PYTHON
-# JEROME MARTIQUET 08/05/2021 v1.0
+# JEROME MARTIQUET 08/05/2021 v1.0 sous licence GNU_GPL version 3 ou supérieure (voir fichier Licence_GNU_GPL.txt)
 
 # Ce programme à pour but d'automatiser l'installation de GLPI et de son plugin FUSIONIVENTORY FOR GLPI à destination des distributions linux.
 # Le serveur destiné a recevoir cette installation doit posséder certains pré-requis, les paquets suivant doivent être installés :
